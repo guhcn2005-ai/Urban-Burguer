@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Restaurante</title>
+
+    <!--Font link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!--Customização css-->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+ 
+<!--sessao header inc-->
+<header>
+
+    <a href="#" class="logo"><i class="fas fa-burger"></i>Urban.</a>
+
+    <nav class="navbar">
+        <a href="#home" class="active">home</a>
+        <a href="#dishes">Pratos</a>
+        <a href="#about">sobre-nos</a>
+        <a href="#review">Avaliações</a>
+    </nav>
+
+    <div class="icons">
+        <i class="fas fa-bars" id="menu-bars"></i>
+        <i class="fas fa-search" id="search-icon"></i>
+        <a href="#" class="fas fa-heart"></a>
+        <a id="btn-carrinho"  onclick="abrirCarrinho()" href="#" class="fas fa-shopping-cart"></a>
+
+    </div>
+
+</header>
+
+<!--sessao header fnl-->
+
+<!--barra de pesquisa (search form)-->
+
+<form action="" id="search-form">
+    <input type="search" placeholder="Pesquise..." id="search-box">
+    <label for="search-box" class="fas fa-search"></label>
+    <i class="fas fa-times" id="close"></i>
+</form>
+
+<!--home sessao cmç-->
+
+<section class="home-banner" id="home">
+    <div class="banner-content">
+        <h1>Seja bem-vindo ao Urban</h1>
+        <p>Descubra nossas delicias</p>
+        <a href="saiba.html" id ="pratos" class="btn">Saiba mais</a>
+    </div>
+</section>
+<!--home sessao fnl-->
+
+<!--sessão de pratos-->
+
+<section class="dishes" id="dishes">
+    
+    <h3 class="sub-heading">Nossos lanches</h3>
+    <h1 class="heading">Os populares</h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-eye"></a>
+            <img src="imagens/imagem1.png">
+            <h3>Urban Burguer</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>R$15,90</span>
+            <a href="#" class="btn" onclick="adicionarCarrinho('Urban Burguer', 15.90, 'imagens/imagem1.png')">Comprar</a>
+        </div>
+        
+        <div class="box">
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-eye"></a>
+            <img src="imagens/imagem2.png">
+            <h3>Urban Chesses</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>R$18,90</span>
+            <a href="#" class="btn" onclick="adicionarCarrinho('Urban Chesses', 18.90, 'imagens/imagem2.png')">Comprar</a>
+
+        </div>
+
+        <div class="box">
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-eye"></a>
+            <img src="imagens/imagem3.png">
+            <h3>Urban Vegan</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>R$17,90</span>
+            <a href="#" class="btn" onclick="adicionarCarrinho('Urban Vegan', 17.90, 'imagens/imagem3.png')">Comprar</a>
+
+        </div>
+
+        <div class="box">
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-eye"></a>
+            <img src="imagens/imagem4.png">
+            <h3>Hot dog</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>R$12,90</span>
+            <a href="#" class="btn" onclick="adicionarCarrinho('Hot dog', 12.90, 'imagens/imagem4.png')">Comprar</a>
+
+        </div>
+
+        <div class="box">
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-eye"></a>
+            <img src="imagens/imagem5.png">
+            <h3>batatinhas Urban</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>R$10,90</span>
+            <a href="#" class="btn" onclick="adicionarCarrinho('batatinhas Urban', 10.90, 'imagens/imagem5.png')">Comprar</a>
+
+        </div>
+
+        <div class="box">
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-eye"></a>
+            <img src="imagens/imagem6.png">
+            <h3>Onios Urban</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>R$8,90</span>
+            <a href="#" class="btn" onclick="adicionarCarrinho('Onios Urban', 8.90, 'imagens/imagem6.png')">Comprar</a>
+
+        </div>
+
+        <div class="box">
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-eye"></a>
+            <img src="imagens/imagem7.png">
+            <h3>Molhos</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>R$3,90</span>
+            <a href="#" class="btn" onclick="adicionarCarrinho('Molhos', 3.90, 'imagens/imagem7.png')">Comprar</a>
+
+
+        </div>
+
+        <div class="box">
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-eye"></a>
+            <img src="imagens/imagem8.png">
+            <h3>Suco laranja</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>R$8,90</span>
+            <a href="#" class="btn"onclick="adicionarCarrinho('Suco laranja', 8.90, 'imagens/imagem8.png')">Comprar</a>
+
+
+        </div>
+
+        <div class="box">
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-eye"></a>
+            <img src="imagens/imagem9.png">
+            <h3>Milk moo urban</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>R$15,90</span>
+            <a href="#" class="btn"onclick="adicionarCarrinho('Milk moo urban', 15.90, 'imagens/imagem9.png')">Comprar</a>
+
+
+        </div>
+
+          <div class="box">
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-eye"></a>
+            <img src="imagens/imagem10.png">
+            <h3>Coca Urban</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>R$11,90</span>
+            <a href="#" class="btn"onclick="adicionarCarrinho('Coca Urban', 11.90, 'imagens/imagem10.png')">Comprar</a>
+
+        </div>
+        <!--Add de Pratos (forma manual (atualizar para js))-->
+
+        </div>
+    </div>
+</section>
+<!--fim sessão de pratos -->
+
+<!--sessão sobre nós-->
+<section class="about" id="about">
+
+    <h3 class="sub-heading">Sobre-nos</h3>
+    <h1 class="heading">porque escolher a Urban</h1>
+
+    <div class="row">
+
+        <div class="image">
+            <img src="imagens/imagem1.png">
+        </div>
+
+        <div class="content">
+            <h3>Melhor hamburguer de São Paulo</h3>
+            <p>Na Urban, acreditamos que um bom hambúrguer vai muito além de um simples lanche  é uma experiência única. Nosso propósito é unir sabor, qualidade e um ambiente acolhedor para criar momentos inesquecíveis com quem você mais ama.</p>
+            <p> Aqui na Urban, você encontra mais do que hambúrgueres  encontra um espaço para compartilhar boas conversas, risadas e momentos deliciosos. Seja para um encontro com amigos, um almoço rápido ou um jantar especial, estamos prontos para receber você de braços abertos.</p>
+            <div class="icons-container">
+                <div class="icons">
+                    <i class="fa fa-motorcycle"></i>
+                    <span>Delivery gratuito</span>
+                </div>
+                 <div class="icons">
+                    <i class="fas fa-dollar-sign"></i>
+                    <span>Pagemntos em Pix</span>
+                </div>
+                 <div class="icons">
+                    <i class="fas fa-headset"></i>
+                    <span>aberto 24/7</span>
+                </div>
+            </div>
+            <a href="saiba.html" class="btn">Saber mais</a>
+        </div>
+    </div>
+</section>
+<!--fim sobre-nos-->
+
+<!--review section começo-->
+<section class="review" id="review">
+
+<h3 class="sub-heading">Avaliação do Cliente</h3>
+<h1 class="heading">o que falam do urban</h1>
+
+<div class="review-slider">
+ 
+    <div class="swiper-wrapper">
+
+        <div class="slide">
+            <i class="fas fa-quote-right"></i>
+            <div class="user">
+                <img src="imagens/usu-pic.png" alt="">
+                <div class="user-info">
+                    <h3>Leticia nascimento</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                </div>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus incidunt magnam unde reiciendis mollitia culpa eius! Ratione iure repellat repudiandae consequuntur officiis libero? Aperiam voluptate repudiandae provident maxime fugiat. Animi.</p>
+        </div>
+    </div>
+
+        <div class="swiper-wrapper">
+
+        <div class="slide">
+            <i class="fas fa-quote-right"></i>
+            <div class="user">
+                <img src="imagens/usu-pic3.png" alt="">
+                <div class="user-info">
+                    <h3>Carlos Nascimento</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                </div>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus incidunt magnam unde reiciendis mollitia culpa eius! Ratione iure repellat repudiandae consequuntur officiis libero? Aperiam voluptate repudiandae provident maxime fugiat. Animi.</p>
+        </div>
+    </div>
+
+        <div class="swiper-wrapper">
+
+        <div class="slide">
+            <i class="fas fa-quote-right"></i>
+            <div class="user">
+                <img src="imagens/usu-pic2.png" alt="">
+                <div class="user-info">
+                    <h3>Roberto leborgat</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                </div>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus incidunt magnam unde reiciendis mollitia culpa eius! Ratione iure repellat repudiandae consequuntur officiis libero? Aperiam voluptate repudiandae provident maxime fugiat. Animi.</p>
+        </div>
+    </div>
+</div>
+</section>
+<!--Final review-->
+
+
+<!--rodapé-->
+<footer class="footer">
+    <div class="box-container">
+        <div class="box">
+            <h3>Sobre Nós</h3>
+            <p>O melhor restaurante de São Paulo, com pratos frescos e atendimento incrível!</p>
+        </div>
+        <div class="box">
+            <h3>Links Rápidos</h3>
+            <a href="#home">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#about">Sobre</a>
+            <a href="#contact">Contato</a>
+        </div>
+        <div class="box">
+            <h3>Contato</h3>
+            <p>Email: contato@restaurante.com</p>
+            <p>Telefone: (11) 99999-9999</p>
+            <p>Endereço: Rua AI AI Ai, 123, São Paulo</p>
+        </div>
+        <div class="box">
+            <h3>Siga-nos</h3>
+            <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+            <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+        </div>
+    </div>
+
+    <div class="credit">
+        &copy; 2025 <span>Urban Burguer Restaurante</span>. Todos os direitos reservados.
+    </div>
+</footer>
+<!--final do rodapé-->
+
+
+ <!-- Carrinho de compras -->
+<div id="carrinho" class="carrinho">
+    <div class="carrinho-header">
+        <h2><i class="fas fa-shopping-cart"></i> Seu Carrinho</h2>
+        <button id="fechar-carrinho" class="fechar-carrinho">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+    <div class="carrinho-body">
+        <div id="lista-carrinho" class="lista-carrinho">
+            <!-- Itens do carrinho serão inseridos aqui dinamicamente -->
+        </div>
+        <div class="carrinho-footer">
+            <div class="total-carrinho">
+                <span>Total: R$</span>
+                <span id="total">0.00</span>
+            </div>
+            <button id="finalizar-pedido" class="btn-finalizar">Finalizar Pedido</button>
+        </div>
+    </div>
+</div>
+ 
+
+<!--final carrinho-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--Customização js link-->
+<script src="script/script.js"></script>
+
+<script src="path-to-the-file/splide.min.js"></script>
+</body>
+</html>
