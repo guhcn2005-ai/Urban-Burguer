@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Web</title>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <h2 class="logo">Urban Burger</h2>
+        <nav class="nav">
+            <a href="/index.html">Home</a>
+            <a href="/saiba.html">Sobre</a>
+            <a href="/index.html">Serviços</a>
+            <a href="/saiba.html">Contato</a>
+            <button class="btnLogin-popup">Login</button>
+        </nav>
+    </header>
+
+    <!-- Container -->
+    <div class="wrapper">
+
+        <span class="icon-close">
+            <ion-icon name="close"></ion-icon>
+        </span>
+
+        <!-- Login -->
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form id="login-form">
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="mail"></ion-icon>
+                    </span>
+                    <input type="email" id="email" name="email" required>
+                    <label>Email</label>
+                </div>
+
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="lock-closed"></ion-icon>
+                    </span>
+                    <input type="password" id="password" name="password" required>
+                    <label>Senha</label>
+                </div>
+
+                <div class="remember-forgot">
+                    <label>
+                        <input type="checkbox"> Lembrar-me
+                    </label>
+                    <a href="#">Esqueceu a senha?</a>
+                </div>
+
+                <button type="submit" class="btn">Entrar</button>
+
+                <div class="login-register">
+                    <p>
+                        Não tem uma conta?
+                        <a id="Register" href="#" class="register-link">Registrar</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+
+        <!-- Registro -->
+        <div class="form-box register">
+        <h2>Cadastro</h2>
+        <form>
+            <div class="input-box">
+                <span class="icon">
+                    <ion-icon name="person"></ion-icon>
+                </span>
+                <input type="text" id="register-user" name="username" required placeholder=" ">
+                <label for="register-user">Nome de usuário</label>
+            </div>
+
+            <div class="input-box">
+                <span class="icon">
+                    <ion-icon name="lock-closed"></ion-icon>
+                </span>
+                <input type="password" id="register-password" name="password" required placeholder=" ">
+                <label for="register-password">Senha</label>
+            </div>
+
+            <button type="submit" class="btn">Cadastrar</button>
+
+            <div class="login-register">
+                <p>
+                    Já tem uma conta?
+                    <a href="javascript:void(0)" class="login-link">Entrar</a>
+                </p>
+            </div>
+        </form>
+    </div>
+
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="/script/login_script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,260 @@
+/* Reset css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+background: linear-gradient(135deg,
+        #7a2e00,
+        #f57c00,
+        #ff9800
+    );    
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+
+
+
+/* Header styling */
+header {
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    user-select: none;
+}
+/* Navigation styling */
+.nav a {
+    position: relative;
+    font-size: 1.1rem;
+    color:#fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+
+}
+
+.nav .btnLogin-popup {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.nav a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    transform-origin: right;
+    background: #fff;
+    border-radius: 5px;
+    transform: scaleX(0);
+}
+
+.nav a:hover::after{
+    transform: scaleX(1);
+    transition: .3s;
+    transform-origin: left;
+}
+
+.nav .btnLogin-popup:hover {
+    background: #fff;
+    color:black;
+    transition: .3s;
+}
+/* Login form popup styling */
+.wrapper {
+    position: relative;
+    max-width: 400px;
+    width: 100%;
+    background: transparent;
+    border-radius: 10px;
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+.wrapper .form-box {
+    width: 100%;
+    padding: 40px 30px;
+}
+/* Form box visibility toggling */
+.form-box.login {
+    display: block;
+}
+
+.form-box.register {
+    display: none;
+}
+
+.wrapper.active .form-box.login {
+    display: none;
+}
+
+.wrapper.active .form-box.register {
+    display: block;
+}
+
+.form-box {
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+/* Close icon styling */
+.wrapper .icon-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: #1687bb;
+    border-radius: 0 10px 0 10px;
+    font-size: 2rem; 
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+}
+
+.form-box h2 {
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    margin-bottom: 30px;
+    height: 50px;
+    border-bottom: 2px solid #fff;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #ffffff;
+    font-weight: 500;
+    pointer-events: none;;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+    top: -5px;
+    font-size: 0.8rem;
+    color: #fff;
+    pointer-events: none;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.input-box .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    line-height: 57px;
+}
+/* Remember me and forgot password styling */
+.remember-forgot {
+    font-size: 0.9rem;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.remember-forgot label input {
+    accent-color: #fff;
+    margin-right: 3px;
+}
+
+.remember-forgot a {
+    color: rgb(76, 174, 255);
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    width: 100%;
+    height: 45px;
+    background: rgb(76, 174, 255);
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: #fff;
+    font-weight: 500;
+}
+
+.login-register {
+    font-size: .9rem;
+    color: #fff;
+    text-align: center;
+    font-weight: 500;
+    margin: 20px 0 10px;
+}
+
+.login-register p a {
+    color: rgb(76, 174, 255);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-register p a:hover {
+    text-decoration: underline;
+}
+
