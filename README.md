@@ -111,7 +111,7 @@ Além disso, possui um **frontend separado** com páginas HTML, CSS e JavaScript
 ### 1. Clonar o repositório
 ```
 
-git clone [https://github.com/guhcn2005-ai/Urban-Burger.git]
+git clone [https://https://github.com/guhcn2005-ai/Urban-Burguer]
 
 ```
 
