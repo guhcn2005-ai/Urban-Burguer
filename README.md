@@ -1,66 +1,165 @@
-# 🍔 Urban Burger — Sistema Web (V2)
+# 🍔 Urban Burger v3
 
-Projeto web desenvolvido com **HTML, CSS e JavaScript puro**, simulando o site institucional e administrativo de uma hamburgueria fictícia chamada **Urban Burger**.  
-Esta é a **versão 2 (V2)** do projeto, com foco em **organização de código, separação de responsabilidades e boas práticas de front-end**.
+Projeto completo de aplicação para gerenciamento de pedidos de uma hamburgueria.
 
----
+## 📌 Sobre o projeto
 
-## 📌 Visão Geral
+O **Urban Burger** é uma aplicação desenvolvida com foco em aprendizado de desenvolvimento backend, permitindo o gerenciamento de produtos, pedidos e usuários.
 
-O Urban Burger é um projeto educacional criado para praticar conceitos fundamentais do desenvolvimento web, incluindo:
-
-- Estruturação semântica com HTML
-- Estilização moderna com CSS
-- Interatividade e lógica de front-end com JavaScript
-- Organização de arquivos e versionamento com Git/GitHub
-
-A **V2** representa uma evolução significativa em relação à versão inicial, trazendo **estrutura profissional**, **tela de login** e **dashboard administrativo**.
+Este projeto demonstra habilidades práticas em construção de APIs, integração com banco de dados e organização de código em camadas.
 
 ---
 
-## 🚀 Funcionalidades
+## 🚀 Tecnologias utilizadas
 
-### 🌐 Área Pública
-- Página inicial institucional
-- Página "Saiba Mais / Sobre Nós"
-- Layout responsivo
-- Design urbano e moderno
+### Backend
 
-### 🔐 Área Administrativa
-- Tela de login
-- Dashboard administrativo
-- Interface separada do site público
-- Scripts dedicados para login e administração
+* Node.js (Express)
+* API REST
+* MySQL
 
-> ⚠️ Observação:  
-> O login é **simulado apenas no front-end**, sem back-end ou banco de dados.
+### Ferramentas
+
+* Git & GitHub
+* Postman
+* MySQL Workbench
 
 ---
 
-## 🧱 Estrutura do Projeto (V2)
+## 🧱 Arquitetura
 
-```text
-Urban-Burger/
-│
-├── css/
-│   ├── style.css          # Estilos principais do site
-│   ├── style2.css         # Estilos complementares
-│   ├── login.css          # Estilos da tela de login
-│   └── adm.css            # Estilos do dashboard administrativo
-│
-├── imagens/
-│   ├── fundo_img.png
-│   ├── img_login.jpg
-│   ├── usu-pic.png
-│   └── demais imagens do projeto
-│
-├── script/
-│   ├── script.js          # JS do site público
-│   ├── login_script.js    # JS da tela de login
-│   └── adm.js             # JS do dashboard
-│
-├── index.html             # Página inicial
-├── saiba.html             # Página institucional
-├── login.html             # Tela de login
-├── adm.html               # Dashboard administrativo
-└── README.md
+O projeto segue uma arquitetura organizada em camadas no backend:
+
+* **Controllers** → Controlam as requisições e respostas
+* **Routes** → Definem os endpoints da API
+* **Models** → Conexão e estrutura do banco de dados
+* **Server** → Inicialização da aplicação
+
+Além disso, possui um **frontend separado** com páginas HTML, CSS e JavaScript.
+
+---
+
+## ⚙️ Funcionalidades
+
+* Cadastro de produtos
+* Listagem de produtos
+* Criação de pedidos
+* Gerenciamento de usuários
+* Integração com banco de dados
+
+---
+
+## 📂 Estrutura do projeto
+
+```
+/api
+ ├── controllers
+ │    ├── authController.js
+ │    ├── burgersController.js
+ │    └── pedidosController.js
+ │
+ ├── models
+ │    └── db.js
+ │
+ ├── routes
+ │    ├── auth.js
+ │    ├── burgers.js
+ │    └── pedidos.js
+ │
+ ├── server.js
+ ├── package.json
+
+/frontend
+ ├── css
+ ├── imagens
+ ├── script
+ ├── adm.html
+ ├── index.html
+ ├── login.html
+ └── saiba.html
+```
+
+/src
+├── controller
+├── service
+├── repository
+├── model
+└── config
+
+```
+
+---
+
+## 🔌 Endpoints principais
+
+### Produtos
+- `GET /products` → Lista todos os produtos
+- `POST /products` → Cria um produto
+
+### Pedidos
+- `GET /orders` → Lista pedidos
+- `POST /orders` → Cria pedido
+
+### Usuários
+- `POST /auth/register` → Cadastro
+- `POST /auth/login` → Login
+
+---
+
+## 🛠️ Como rodar o projeto
+
+### 1. Clonar o repositório
+```
+
+git clone [https://github.com/guhcn2005-ai/Urban-Burger.git]
+
+```
+
+### 2. Entrar na pasta
+```
+
+cd Urban-Burger
+
+```
+
+### 3. Configurar o banco de dados
+- Criar banco no MySQL
+- Atualizar credenciais no projeto
+
+### 4. Rodar aplicação
+
+#### Node.js:
+```
+
+npm install
+npm start
+
+```
+```
+
+---
+
+## 🧪 Testes
+
+Utilize o Postman para testar os endpoints da API.
+
+---
+
+## 📈 Melhorias futuras
+
+* Autenticação com JWT
+* Deploy em nuvem (AWS, Railway, etc)
+* Interface frontend
+* Sistema de pagamento
+
+---
+
+## 👨‍💻 Autor
+
+Desenvolvido por Gustavo Henrique
+
+---
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT.
